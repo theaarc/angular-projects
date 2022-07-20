@@ -1,0 +1,215 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body id="TRUC" #TRUC>
+<div class="resume_container_v2 resume_rounded_side">
+  <div class="left-side">
+    <div class="left-content">
+      <div style="display: flex; position: relative; width: 100%; justify-content: center;">
+        <div class="update-selector">
+          <div class="red-border-box no_print"></div>
+          <div class="imgCol"><img src="../../assets/images/personne.png"  class="user-img" width="200" height="200"></div>
+        </div>
+      </div>
+      <div class="update-selector">
+        <div class="red-border-box no_print"></div>
+        <div class="section info-perso">
+          <div class="title">Personals informations</div>
+          <div class="personal-info-container">
+            <div class="personal-info-item" style="display: flex;">
+              <div class="personal-info-icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm0 336V256H128.3L352 160l-96 224z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="personal-info-item" style="display: flex;">
+              <div class="personal-info-icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                </svg>
+              </div>
+              <div class="personal-info-title">
+                <div style="font-size: 15px;">
+                  <div style="display: block;">{{ userState.address }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="personal-info-item" style="display: flex;">
+              <div class="personal-info-icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M320 96H88a40 40 0 00-40 40v240a40 40 0 0040 40h334.73a40 40 0 0040-40V239"></path>
+                  <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M112 160l144 112 87-65.67"></path>
+                  <circle cx="431.95" cy="128.05" r="47.95"></circle>
+                  <path d="M432 192a63.95 63.95 0 1163.95-63.95A64 64 0 01432 192zm0-95.9a32 32 0 1031.95 32 32 32 0 00-31.95-32z"></path>
+                </svg>
+              </div>
+              <div class="personal-info-title">
+                <div style="font-size: 15px;">
+                  <div style="display: block;">{{ userState.email }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="personal-info-item" style="display: flex;">
+              <div class="personal-info-icon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M478.94 370.14c-5.22-5.56-23.65-22-57.53-43.75-34.13-21.94-59.3-35.62-66.52-38.81a3.83 3.83 0 00-3.92.49c-11.63 9.07-31.21 25.73-32.26 26.63-6.78 5.81-6.78 5.81-12.33 4-9.76-3.2-40.08-19.3-66.5-45.78s-43.35-57.55-46.55-67.3c-1.83-5.56-1.83-5.56 4-12.34.9-1.05 17.57-20.63 26.64-32.25a3.83 3.83 0 00.49-3.92c-3.19-7.23-16.87-32.39-38.81-66.52-21.78-33.87-38.2-52.3-43.76-57.52a3.9 3.9 0 00-3.89-.87 322.35 322.35 0 00-56 25.45A338 338 0 0033.35 92a3.83 3.83 0 00-1.26 3.74c2.09 9.74 12.08 50.4 43.08 106.72 31.63 57.48 53.55 86.93 100 133.22S252 405.21 309.54 436.84c56.32 31 97 41 106.72 43.07a3.86 3.86 0 003.75-1.26A337.73 337.73 0 00454.35 430a322.7 322.7 0 0025.45-56 3.9 3.9 0 00-.86-3.86z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="personal-info-item" style="display: flex;">
+              <div class="personal-info-title">
+                <div style="font-size: 15px;" *ngFor="let comp of arrlien | slice:0:2; let i=index">
+                  <div style="display: block;" *ngIf="comp.id != '' ">{{comp.nom}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 669px;">
+        <div class="dndColumn" data-rbd-droppable-id="left" data-rbd-droppable-context-id="0" style="position: relative; height: 100%; overflow: hidden; background-color: rgba(250, 251, 252, 0); transition: all 0.3s ease-in 0s;">
+          <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="languagesId">
+            <div class="resume-section-container">
+              <div class="update-selector">
+                <section class="section skill">
+                  <h2 class="title_container" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="languagesId" data-rbd-drag-handle-context-id="0" draggable="false" style="cursor: move;"><span class="no_print" style="position: absolute; left: 0px; opacity: 0.7;"><span class="action-button">
+                    </span></span><span class="title">languages</span></h2>
+                  <ul class="list dotRatingBar" class="list noLevel" *ngFor="let comp of arrlang | slice:0:3; let i=index">
+                    <li class="itemList" *ngIf="comp.id != '' ">
+                      <div class="star-rating-bar"><span class="star-rating-label">{{ comp.nom }}</span><span class=""></span></div>
+                    </li>
+                    <li class="itemList" *ngIf="comp.id != '' ">
+                      <progress max="100" value="{{comp.niveau}}">{{ comp.niveau }}</progress>  {{comp.niveau}}%
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="industryId">
+            <div class="resume-section-container">
+              <div>
+                <section class="section skill">
+                  <h2 class="title_container" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="industryId" data-rbd-drag-handle-context-id="0" draggable="false" style="cursor: move;"><span class="no_print" style="position: absolute; left: 0px; opacity: 0.7;"><span class="action-button">
+                    </span></span><span class="title">Competences</span></h2>
+                  <ul class="list noLevel" *ngFor="let comp of arrcomp | slice:0:3; let i=index">
+                    <li class="itemList"  *ngIf="comp.id != '' ">{{ comp.title }}</li>
+                    <li class="itemList"  *ngIf="comp.id != '' "><progress max="100" value="{{comp.percentage}}">{{ comp.title }}</progress>  {{comp.percentage}}%</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="socialId">
+            <div class="resume-section-container">
+              <div class="update-selector">
+                <section class="section skill">
+                  <h2 class="title_container" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="socialId" data-rbd-drag-handle-context-id="0" draggable="false" style="cursor: move;"><span class="no_print" style="position: absolute; left: 0px; opacity: 0.7;"><span class="action-button">
+                    </span></span><span class="title">point of interest</span></h2>
+                  <ul class="list noLevel" *ngFor="let comp of arrlor | slice:0:3; let i=index">
+                    <li class="itemList" *ngIf="comp.id != '' ">{{comp.nom}}</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="right-content">
+      <div class="update-selector">
+        <div class="red-border-box no_print"></div>
+        <div class="border-box no_print ">
+          <div class="action-buttons"></div>
+        </div>
+        <div class="userNameCol">
+          <div class="user-firstname">
+            <div style="font-size: 19px;">
+              <div style="display: block;">{{ userState.nom }}</div>
+            </div>
+          </div>
+          <div class="user-name">
+            <div style="font-size: 22px;">
+              <div style="display: block;">{{ userState.prenom }}</div>
+            </div>
+          </div>
+          <div class="subtitle">
+            <div>
+              <div style="display: inline-block;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="update-selector">
+        <div class="section sumary">
+          <p class="title">About</p>
+          <div class="user-summary">
+            <p class="description">{{ userState.biographie }}</p>
+          </div>
+        </div>
+      </div>
+      <div style="height: 866px;">
+        <div class="dndColumn" data-rbd-droppable-id="right" data-rbd-droppable-context-id="0" style="position: relative; height: 100%; overflow: hidden; background-color: rgba(250, 251, 252, 0); transition: all 0.3s ease-in 0s;">
+          <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="experiences">
+            <div class="resume-section-container">
+              <div class="update-selector">
+                <section class="section experience">
+                  <h2 class="title_container" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="experiences" data-rbd-drag-handle-context-id="0" draggable="false" style="cursor: move;"><span class="no_print" style="position: absolute; left: 0px; opacity: 0.7;"><span class="action-button"></span></span>
+                    <span class="title">Professional Experience</span></h2>
+                  <ul class="list" *ngFor="let comp of arrexp | slice:0:3; let i=index">
+                    <li class="itemList" *ngIf="comp.id != '' ">
+                      <div class="experienceItem">
+                        <div class="dates">{{comp.periode}}</div>
+                        <div class="company">{{comp.entreprise}}</div>
+                        <div class="title">{{comp.poste}}</div>
+                        <div class="description">{{comp.detail}}</div>
+                        <div class="description">{{comp.country}}</div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="education">
+            <div class="resume-section-container">
+              <div class="update-selector">
+                <section class="section experience">
+                  <h2 class="title_container" tabindex="0" role="button" aria-describedby="rbd-hidden-text-0-hidden-text-0" data-rbd-drag-handle-draggable-id="education" data-rbd-drag-handle-context-id="0" draggable="false" style="cursor: move;">
+
+                    <span class="no_print" style="position: absolute; left: 0px; opacity: 0.7;"><span class="action-button">
+
+                    </span></span><span class="title">Formations</span></h2>
+                  <ul class="list" *ngFor="let comp of arrcur | slice:0:2; let i=index">
+                    <li class="itemList" *ngIf="comp.id != '' ">
+                      <div class="experienceItem">
+                        <div class="dates">{{comp.periode}}</div>
+                        <div class="company">{{comp.ecole}}</div>
+                        <div class="title">{{comp.cathegorie}}</div>
+                        <div class="description">{{comp.diplome}}</div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-number-counter">1/1</div>
+</div>
+</body>
+<input type="button" value="Download Me" class="btn btn-success" (click)="captureScreen()"><br>
+</html>
+
+

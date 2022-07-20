@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>cv obam dimi</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="TRUC" #TRUC>
+  <div id="border" style="border : groove 2px gray">
+  <main>
+    <header>
+      <div class="photo">
+        <img src="../../assets/images/personne.png" width="100%" height="100%" alt="mot">
+      </div>
+      <div class="des">
+        <h3>{{ userState.nom }}</h3>
+        <h3>{{ userState.prenom }}</h3>
+        <p class="post">{{ userState.profession }}</p>
+      </div>
+      <div class="right1">
+        <p>{{ userState.email }}</p>
+        <p>{{ userState.prenom }}</p>
+        <p>{{ userState.address }}</p>
+      </div>
+    </header>
+    <section class="section-gauche">
+      <h4>Abouts</h4>
+      <hr class="light">
+      <div class="atouts">
+        {{ userState.biographie }}
+      </div>
+      <br><h4>Diplômes et formation</h4>
+      <hr class="light">
+      <div class="div" *ngFor="let comp of arrcur | slice:0:3; let i=index">
+        <div *ngIf="comp.id != '' ">
+        <div><b>{{ comp.cathegorie }}</b>
+          <strong> {{ comp.ecole }} </strong><br> {{ comp.diplome }} </div><br> {{ comp.periode }}
+        </div>
+      </div>
+
+      <br><h4>Expériences Professionnelles</h4>
+      <hr class="light">
+        <div class="div" *ngFor="let comp of arrexp | slice:0:3; let i=index">
+          <div *ngIf="comp.id != '' ">
+          <p><b> {{ comp.poste }}  </b><strong> {{ comp.entreprise }} </strong><br>
+             {{ comp.periode }}  <br>
+            {{ comp.detail }}  <strong>  {{ comp.country }}  </strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-droite">
+      <br><h4>Compétences</h4>
+      <hr class="light">
+        <div class="skls"  *ngFor="let comp of arrcomp | slice:0:3; let i=index">
+          <div class="po" *ngIf="comp.id != '' ">
+            <p>{{ comp.title }} </p>
+            {{ comp.percentage }}%
+              <progress max="100" value="{{comp.percentage}}"></progress>
+          </div>
+        </div>
+        <br><h4>Langues</h4>
+        <hr class="light">
+          <div class="skls" *ngFor="let comp of arrlang | slice:0:3; let i=index">
+            <div class="po" *ngIf="comp.id != '' ">
+              <p>{{ comp.nom }}</p>
+              <div>
+                {{comp.niveau}}
+                <progress max="100" value="{{comp.niveau}}"></progress>
+              </div>
+            </div>
+          </div>
+          <br><h4>Réseaux Sauciax</h4>
+            <hr class="light">
+              <div class="interet" *ngFor="let comp of arrlien | slice:0:3; let i=index">
+                <p *ngIf="comp.id != '' "><span>{{comp.titre}}</span></p>
+              </div>
+
+              <h4>Centres d'intérets</h4>
+                <hr class="light">
+                  <div class="interet" *ngFor="let comp of arrlor | slice:0:3; let i=index">
+                    <div *ngIf="comp.id != '' "><b><span>{{comp.nom}}</span></b></div>
+                  </div>
+    </section>
+    <!--fin de la section -->
+      <div class="srkl">
+
+      </div>
+    <hr class="light">
+  </main>
+</div>
+</body>
+<input type="button" value="Download Me" class="btn btn-success" (click)="captureScreen()"><br>
+</html>
